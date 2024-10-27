@@ -155,6 +155,20 @@ const config: Config = {
     plugin(function ({addVariant}) {
       addVariant("peer-nested", ":merge(.peer-nested):checked ~ * &");
     }),
+
+    plugin(function ({addUtilities, theme}) {
+      const fontSize = theme("fontSize");
+
+      if (!fontSize) return;
+
+      const fontSizeUtilities = Object.entries(fontSize).reduce((acc, [key, value]) => {
+        // @ts-ignore
+        acc[`.font-${key}`] = {fontSize: value};
+        return acc;
+      }, {});
+
+      addUtilities(fontSizeUtilities);
+    }),
   ],
 };
 export default config;

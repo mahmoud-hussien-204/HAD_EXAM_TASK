@@ -1,16 +1,16 @@
 "use client";
 
-import ComingIcon from "@/components/icons/comingIcon";
+import IconComing from "@/components/icons/IconComing";
 
-import DocumentsIcon from "@/components/icons/documentsIcon";
+import IconDocument from "@/components/icons/IconDocument";
 
-import SettingsIcon from "@/components/icons/settingsIcon";
+import IconSettings from "@/components/icons/IconSettings";
 
-import StatsIcon from "@/components/icons/statsIcon";
+import IconStats from "@/components/icons/IconStats";
 
-import ToolsIcon from "@/components/icons/toolsIcon";
+import IconTools from "@/components/icons/IconTools";
 
-import UsersIcon from "@/components/icons/usersIcon";
+import IconUsers from "@/components/icons/IconUsers";
 
 import AppHelper from "@/helpers/AppHelper";
 
@@ -22,32 +22,32 @@ export const Navbar = () => {
   return (
     <nav className="flex flex-col gap-0.75rem h-full">
       <NavbarItem href="/overview">
-        <StatsIcon />
+        <IconStats />
         <span className="lg:peer-nested:opacity-0 transition-opacity">Overview</span>
       </NavbarItem>
 
       <NavbarItem href="/exams">
-        <UsersIcon />
+        <IconUsers />
         <span className="lg:peer-nested:opacity-0 transition-opacity">Exams</span>
       </NavbarItem>
 
       <NavbarItem href="/overview">
-        <DocumentsIcon />
+        <IconDocument />
         <span className="lg:peer-nested:opacity-0 transition-opacity">Wizard</span>
       </NavbarItem>
 
       <NavbarItem href="/overview">
-        <ComingIcon />
+        <IconComing />
         <span className="lg:peer-nested:opacity-0 transition-opacity">Coming soon</span>
       </NavbarItem>
 
       <NavbarItem href="/overview">
-        <ToolsIcon />
+        <IconTools />
         <span className="lg:peer-nested:opacity-0 transition-opacity">Tools</span>
       </NavbarItem>
 
       <NavbarItem href="/overview">
-        <SettingsIcon />
+        <IconSettings />
         <span className="lg:peer-nested:opacity-0 transition-opacity">Settings</span>
       </NavbarItem>
     </nav>

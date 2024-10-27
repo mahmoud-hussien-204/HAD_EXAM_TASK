@@ -13,9 +13,9 @@ const Input = forwardRef(
         ref={ref}
         {...props}
         className={AppHelper.classes(
-          "input input-bordered w-full focus:border-primary focus:outline-0 focus:outline-primary/50 focus:outline-dashed placeholder:text-13",
+          "input input-bordered w-full focus:border-primary focus:outline-0 placeholder:text-13",
           {
-            "input-error focus:outline-error/50 focus:border-error": isError,
+            "input-error focus:border-error": isError,
           },
           className
         )}
@@ -25,3 +25,5 @@ const Input = forwardRef(
 );
 
 export default Input;
+
+Input.displayName = "Input";

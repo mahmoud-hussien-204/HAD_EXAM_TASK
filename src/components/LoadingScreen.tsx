@@ -2,7 +2,7 @@ import Container from "@/components/Container";
 
 import Spinner from "@/components/Spinner";
 
-export const LoadingScreen = () => {
+const LoadingScreen = () => {
   return (
     <div className="flex items-center min-h-screen py-2rem">
       <Container>
@@ -15,3 +15,5 @@ export const LoadingScreen = () => {
     </div>
   );
 };
+
+export default LoadingScreen;

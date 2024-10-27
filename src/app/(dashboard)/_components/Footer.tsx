@@ -4,7 +4,7 @@ const Footer = () => {
       <p className="text-14 text-gray-500">
         Copyright © {new Date().getFullYear()}{" "}
         <a href="#" className="link-primary font-bold">
-          Loopak
+          HAD
         </a>
         . All rights reserved
       </p>

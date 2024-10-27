@@ -12,9 +12,7 @@ import Label from "@/components/Label";
 
 import Link from "next/link";
 
-type Props = {};
-
-const LoginForm = ({}: Props) => {
+const LoginForm = () => {
   const {
     onSubmit,
     handleSubmit,

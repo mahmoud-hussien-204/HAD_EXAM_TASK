@@ -1,1 +1,3 @@
-export const constantTimer = 1000;
+export const constantTimer = 500;
+
+export const constantDebounceTime = 250;

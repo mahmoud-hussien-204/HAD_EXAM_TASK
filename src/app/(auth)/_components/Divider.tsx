@@ -1,6 +1,6 @@
 import AppHelper from "@/helpers/AppHelper";
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {}
+type IProps = React.HTMLAttributes<HTMLDivElement>;
 
 const Divider = ({className, ...props}: IProps) => {
   return (

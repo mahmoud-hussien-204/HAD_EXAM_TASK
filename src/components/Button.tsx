@@ -5,7 +5,7 @@ import {ButtonHTMLAttributes, ReactNode} from "react";
 type Props = {
   children: ReactNode;
   isLoading?: boolean;
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "ghost";
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({children, isLoading, className, variant = "primary", ...props}: Props) => {
@@ -16,6 +16,8 @@ const Button = ({children, isLoading, className, variant = "primary", ...props}:
         "btn-secondary text-base-content": variant === "secondary",
         "btn-outline border-primary text-base-content hover:text-white hover:bg-primary hover:border-primary":
           variant === "outline",
+        "btn-ghost hover:bg-transparent text-neutral-500 hover:text-base-content":
+          variant === "ghost",
       })}
       disabled={isLoading}
       {...props}

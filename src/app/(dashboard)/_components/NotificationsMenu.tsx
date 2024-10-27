@@ -10,9 +10,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 
 dayjs.extend(relativeTime);
 
-type Props = {};
-
-const NotificationsMenu = ({}: Props) => {
+const NotificationsMenu = () => {
   return (
     <div className="dropdown dropdown-end">
       <div role="button" tabIndex={0} className="text-gray-500 relative animate-bounce">

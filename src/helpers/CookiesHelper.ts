@@ -12,16 +12,16 @@ export type CookieOptions = OptionsType;
 
 export default class CookiesHelper {
   // get cookie
-  static getCookie(key: string, options: CookieOptions = {}): any {
+  static getCookie(key: string, options: CookieOptions = {}): unknown {
     return getCookieFn(key, options);
   }
 
-  static getCookies(options: CookieOptions = {}): any {
+  static getCookies(options: CookieOptions = {}): unknown {
     return getCookiesFn(options);
   }
 
   // set cookie
-  static setCookie(key: string, data: any, options: CookieOptions = {}): void {
+  static setCookie(key: string, data: unknown, options: CookieOptions = {}): void {
     setCookieFn(key, data, options);
   }
 
