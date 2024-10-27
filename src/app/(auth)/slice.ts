@@ -1,4 +1,6 @@
 // authSlice.ts
+import {EnumAppKeys} from "@/enums";
+import CookiesHelper from "@/helpers/CookiesHelper";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface InitialState {
@@ -19,13 +21,15 @@ const slice = createSlice({
       state.isAuthenticated = action.payload.isAuthenticated;
       state.userData = action.payload.userData;
     },
-    login(state, action: PayloadAction<any>) {
+    login(state, action: PayloadAction<IUser>) {
       state.isAuthenticated = true;
       state.userData = action.payload;
+      CookiesHelper.setCookie(EnumAppKeys.USER_DATA, action.payload);
     },
     logout(state) {
       state.isAuthenticated = false;
       state.userData = null;
+      CookiesHelper.deleteCookie(EnumAppKeys.USER_DATA);
       window.location.pathname = "/auth";
     },
   },
